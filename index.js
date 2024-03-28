@@ -40,7 +40,7 @@ gsap.to(".slide-next-img", {
     delay: 1,
 });
 
-document.addEventListener("click", function () {
+function magic() {
     if (isAnimating) return;
 
     isAnimating = true;
@@ -100,7 +100,7 @@ document.addEventListener("click", function () {
     });
 
     currentImgIdx = (currentImgIdx % totalImages) + 1;
-    const newSlideHTML = `<div class="slide-next"><div class="slide-next-img"><img src="./assets/${currentImgIdx}.jpg" alt=""></div></div>`;
+    const newSlideHTML = `<div class="slide-next"><div class="slide-next-img"><img src="./assets/small_${currentImgIdx}.jpg" alt=""></div></div>`;
 
     document.querySelector(".slider").insertAdjacentHTML("beforeend", newSlideHTML);
 
@@ -140,4 +140,12 @@ document.addEventListener("click", function () {
             }, 500);
         }
     });
+}
+
+document.addEventListener("click",  magic);
+
+document.addEventListener("keydown", function (e) {
+    if (e.code === "Space") {
+        magic();
+    }
 });

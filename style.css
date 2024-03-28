@@ -170,3 +170,18 @@ h1 span {
         height: 280px;
     }
 }
+@media (max-width: 400px) {
+
+    .copy p {
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .slide-next .slide-next-img {
+        width: 200px;
+        height: 280px;
+    }
+}
