@@ -172,8 +172,8 @@ h1 span {
 }
 @media (max-width: 400px) {
 
-    .copy p {
-        font-size: 0.5rem;
+    .copy {
+        display: none;
     }
 
     h1 {
