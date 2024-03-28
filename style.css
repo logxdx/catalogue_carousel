@@ -170,7 +170,7 @@ h1 span {
         height: 280px;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
 
     .copy {
         display: none;
