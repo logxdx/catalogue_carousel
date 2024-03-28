@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+p, a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+nav {
+    font-family: "Teko", sans-serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+nav a {
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    font-weight: 500;
+}
+
+nav a:nth-child(2) {
+    font-weight: 400;
+}
+
+.underline {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.underline::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    right: 0;
+    top: 8px;
+    height: 70%;
+    background: white;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.underline:hover {
+    color: black;
+}
+
+.underline:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.copy {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100vw;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 2;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide-active {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-next {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-next .slide-next-img {
+    width: 250px;
+    height: 350px;
+    clip-path: circle(0%);
+}
+
+.slider-content {
+    position: absolute;
+    left: 2em;
+    bottom: 1em;
+    width: 90%;
+    height: 175px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.slide-active-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.slide-next-content {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: "Teko";
+    font-size: 150px;
+    font-weight: lighter;
+    color: white;
+}
+
+h1 span {
+    position: relative;
+}
+
+@media (max-width: 900px) {
+        
+    nav a {
+        font-size: 1.5rem;
+    }
+
+    .copy {
+        width: fit-content;
+        top: 88%;
+        right: 0;
+        flex-direction: column;
+    }
+
+    .slide-next .slide-next-img {
+        width: 200px;
+        height: 280px;
+    }
+}
