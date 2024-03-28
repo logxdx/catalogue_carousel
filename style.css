@@ -173,15 +173,11 @@ h1 span {
 @media (max-width: 400px) {
 
     .copy p {
-        font-size: 0.8rem;
+        font-size: 0.5rem;
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 8rem;
     }
 
-    .slide-next .slide-next-img {
-        width: 200px;
-        height: 280px;
-    }
 }
